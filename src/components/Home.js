@@ -29,7 +29,7 @@ function Home() {
                 <img src="svg/wi-solar-eclipse.svg"/>
                 </div>
             </div>
-            <button className="four">Weather</button>
+            <button className="four">Forecast</button>
             <div className="circle eighth">
                
                 <div className="inner-circle four">
