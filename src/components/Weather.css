@@ -2,30 +2,24 @@
      *{
          box-sizing: border-box;
      }
-   
    .forecast{
+       text-align: center;
        width: 100vw;
        height: 100vh;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-    /* filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px); 
-  opacity: 0.7;    */
    }
-   
    .forecast-blur{
        width: 100vw;
        height: 100vh;
        background: rgba( 21, 20, 20, 0.5 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 13px );
--webkit-backdrop-filter: blur( 13px );
-
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+       backdrop-filter: blur( 13px );
+       -webkit-backdrop-filter: blur( 13px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
    }
-
    .forecast-container{
        display: flex;
        width: 1000px;
@@ -34,18 +28,13 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
        margin: 40px auto;
        z-index: 100;
        border-radius: 10px;
-       position: relative;
-       
-       
-       
+       position: relative;    
    }
 
    .forecast-container .image{
        max-width: 100%;
        object-fit: cover;
-      
    }
-
    .image img{
        width: 1000px;
        border-radius: 10px;
@@ -55,24 +44,15 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
        left: 499px;
        object-fit: cover;
    }
-
     aside{
        position: relative;
        width: 400px;
        height: 100%;
        padding: 35px;
-        
-   
        background: rgba( 21, 20, 20, 0.35 );
-/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-backdrop-filter: blur( 6.5px );
--webkit-backdrop-filter: blur( 6.5px );
-/* border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-       /* border-radius: 10px;
-       border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+       backdrop-filter: blur( 6.5px );
+      -webkit-backdrop-filter: blur( 6.5px );
    } 
-
    aside #input{
        padding: 10px;
        width: 70%;
@@ -82,14 +62,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     border-bottom: 1px solid #eee;
     color: #eee;
    }
-
-  
-
    aside .cities{
        height: 200px;
-   
    }
-
    aside .cities button{
        border: none;
        outline: none;
@@ -105,17 +80,14 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
        padding: 10px;
        box-shadow: none;
    }
-
    aside .cities button.last{
        border-bottom: 1px solid #eee;
        padding-bottom: 20px;
    }
-
    aside .weather-details{
        color: #eee;
        margin-top: 40px;
    }
-
    aside .weather-details h3{
      font-weight: 500;
    }
@@ -135,7 +107,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
        padding: 5px;
        box-shadow: none;
        justify-content: space-between;
-
    }
    .weather-content{
        position: absolute;
@@ -149,42 +120,18 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
        justify-content: space-between;  
        color: #eee;  
    }
-
    .weather-content .degrees{
        font-size: 48px;
    }
-
    .weather-content .city-date h2{
 margin-top: 105px;
 margin-bottom: -10px;
    }
-
    .weather-content .icon img{
-       margin-top: 91px;
+    margin-top: 91px;
     filter: invert(90%) sepia(11%) saturate(777%) hue-rotate(192deg) brightness(104%) contrast(107%);
-
-
    }
-     /* form button{
-       position: absolute;
-       left: 0;
-       top: -20px;
-       background: linear-gradient(145deg, #42450A, #314528);
-       width: 60px;
-       height: 60px;
-       border-radius: 0;
-       border: none;
-       outline: none;
-   }
-
-   i.search::before {
-    font-family: "Font Awesome 5 Brands"; 
-	font-weight: 400;
-	content: "\f002";
     
-}
-
-  */
 
 
   

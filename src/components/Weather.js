@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import "./Weather.css"
 
 // const forecastStyle = {
@@ -7,62 +7,82 @@ import "./Weather.css"
 //   backgroundImage: `url("https://images.pexels.com/photos/11724626/pexels-photo-11724626.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"`,
 // }
 
-function Weather(){
-    return(
-        <div className="forecast" style={{backgroundImage:`url("https://images.pexels.com/photos/11724626/pexels-photo-11724626.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"`}} >
+function Weather({ data }) {
+    const [searchCity, setSearchCity] = useState("")
+    const [autoCity, setAutoCity] = useState([])
+    const date = Date(data.current.last_updated_epoch).slice(0, 21)
+    let background = "sunny.webp"
+    const text = data.current.condition.text.toLowerCase()
+    background = text.includes("rain") || text.includes("drizzle") || text.includes("storm")
+        ? "rainy.jpeg" :
+        text.includes("cloud") || text.includes("overcast") ? "cloudy.webp" :
+            "snow.jpeg"
+    
+    function handleSearch(e){
+        setSearchCity(e.target.value)
+    }
+
+    useEffect(()=> {
+        fetch(`http://api.weatherapi.com/v1/search.json?key=f2397f2d2d31453d8a2182757222907&q=${searchCity}`)
+        .then((r) => r.json())
+        .then(setAutoCity)
+    }, [searchCity])
+
+    return (
+        <div className="forecast" style={{ backgroundImage: `url(weather-img/${background})` }} >
             <div className="forecast-blur">
-            <div className="forecast-container">
-                  <div className="image">
-                      <img src="https://images.pexels.com/photos/11724626/pexels-photo-11724626.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"/>
-                  </div>
-                  <div className="weather-content">
-                      <div className="degrees">
-                          <h1>16°</h1>
-                          </div>
+                <div className="forecast-container">
+                    <div className="image">
+                        <img src={"weather-img/" + background} />
+                    </div>
+                    <div className="weather-content">
+                        <div className="degrees">
+                            <h1>{data.current.temp_c}&deg;</h1>
+                        </div>
 
-                          <div className="city-date">
-                              <h2>London</h2>
-                              <p>16:09 Monday 9/9/19</p>
-                          </div>
+                        <div className="city-date">
+                            <h2>{data.location.name}</h2>
+                            <p>{date}</p>
+                        </div>
 
-                          <div className="icon">
-                              <img src="svg/wi-solar-eclipse.svg"/>
-                              
-                          </div>
+                        <div className="icon">
+                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
 
-                  </div>
-              <aside>
-                <form action="" autoComplete="on">
-                    <input id ="input" type="text" placeholder="Enter city"/> 
-                </form>
-                <div className="cities">
-                    <button className="cities-button">Manchester</button>
-                    <button className="cities-button">New York</button>
-                    <button className="cities-button last">Carlifonia</button>
+                        </div>
+
+                    </div>
+                    <aside>
+                        <form action="" autoComplete="off">
+                            <input id="input" type="text" value={searchCity} onChange={handleSearch} placeholder="Enter city" />
+                        </form>
+                        <div className="cities">
+                            <button className="cities-button">Manchester</button>
+                            <button className="cities-button">New York</button>
+                            <button className="cities-button last">Carlifonia</button>
+                        </div>
+                        <div className="weather-details">
+                            <h3>Weather Details</h3>
+                            <button className="details">
+                                <p>Humidity</p>
+                                <p>{data.current.humidity}%</p>
+                            </button>
+                            <button className="details">
+                                <p>Wind Speed</p>
+                                <p>{data.current.wind_kph}km/hr</p>
+                            </button>
+                            <button className="details">
+                                <p>Pressure</p>
+                                <p>{data.current.pressure_in}in</p>
+                            </button>
+                        </div>
+                    </aside>
+
                 </div>
-                <div className="weather-details">
-                    <h3>Weather Details</h3>
-                    <button className="details">
-                        <p>Humidity</p>
-                        <p>88mmHg</p>
-                    </button>
-                    <button className="details">
-                        <p>Air Quality</p>
-                        <p>82%</p>
-                    </button>
-                    <button className="details">
-                        <p>Wind</p>
-                        <p>76</p>
-                    </button>
-                </div>
-            </aside>
-
-              </div>
             </div>
-              
-              
 
-        
+
+
+
 
         </div>
     )
