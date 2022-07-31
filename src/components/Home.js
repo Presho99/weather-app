@@ -15,7 +15,8 @@ function Home() {
                 <div className="circle sixth">
 
                     <div className="inner-circle two">
-                        <img src="svg/wi-solar-eclipse.svg" />
+                        
+                        <img src="svg/wi-sunrise.svg" />
                     </div>
                 </div>
                
@@ -26,7 +27,7 @@ function Home() {
                 <div className="circle seventh">
 
                     <div className="inner-circle three">
-                        <img src="svg/wi-solar-eclipse.svg" />
+                        <img src="svg/wi-time-4.svg" />
                     </div>
                 </div>
                 <button className="four">SUN/MOON</button>
