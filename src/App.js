@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import Weather from './components/Weather';
 import Forecast from './components/Forecast'
 import Clock from './components/Clock'
+import Navbar from './components/Navbar'
 
 function App() {
   const [city, setCity] = useState("Nairobi")
@@ -22,8 +23,9 @@ function App() {
   
   return (
     <div className="App">
+      <Navbar/>
        {/* <Home/> */}
-       {data.current ?<Weather data={data}/> : null}
+       {/* {data.current ?<Weather data={data}/> : null} */}
        
         {/* <Forecast/> */}
         {/* <Clock/> */}
