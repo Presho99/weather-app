@@ -4,9 +4,10 @@ import React, { useEffect , useState} from "react"
 import Home from "./components/Home"
 import Weather from './components/Weather';
 import Forecast from './components/Forecast'
+import Clock from './components/Clock'
 
 function App() {
-  const [city, setCity] = useState("Kisumu")
+  const [city, setCity] = useState("Nairobi")
   const [data, setData] = useState({}) 
 
   useEffect(()=> {
@@ -21,10 +22,11 @@ function App() {
   
   return (
     <div className="App">
-       {/* <Home/> */}
+       <Home/>
        {/* {data.current ?<Weather data={data}/> : null} */}
        
-        <Forecast/>
+        {/* <Forecast/> */}
+        {/* <Clock/> */}
 
      
       

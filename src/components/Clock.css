@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+.clock {
+
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.clock-blur {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(21, 20, 20, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.clock-one,
+.clock-two {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    margin-left: 40px;
+    border-radius: 50%;
+
+    text-align: center;
+    align-items: center;
+    position: relative;
+    color: #d7e0e0;
+
+}
+
+.clock-one {
+    border: 5px solid #e1ad01;
+    z-index: 0;
+}
+
+.clock-two {
+    border: 5px solid #53687C;
+    z-index: 0;
+}
+
+.clock-one img {
+    filter: invert(64%) sepia(20%) saturate(1839%) hue-rotate(9deg) brightness(100%) contrast(102%);
+}
+
+.clock-two img {
+    filter: invert(39%) sepia(6%) saturate(1618%) hue-rotate(168deg) brightness(97%) contrast(93%);
+
+
+}
+
+.clock button {
+    background: #d7e0e0;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    box-shadow: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: lighter;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.clock .top {
+    margin-top: 20px;
+}
+
+.clock .top img {
+    margin-top: 40px;
+    width: 70px;
+
+
+}
+
+.clock .top h3 {
+    margin-top: 70px;
+    font-size: 40px;
+}
+
+.clock .bottom {
+
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.clock .bottom img {
+    margin-top: 30px;
+    margin-left: 53px;
+    width: 70px;
+
+}
+
+.clock .bottom h3 {
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #d7e0e0;
+    position: absolute;
+
+}
+
+@media(max-width: 900px) {
+    .line {
+        display: none;
+    }
+
+    .clock-one,
+    .clock-two {
+        width: 300px;
+        height: 300px;
+    }
+
+    .clock-one h3 {
+        font-size: 88px;
+        margin-top: 40px;
+    }
+
+    .clock button {
+        width: 70px;
+        font-size: 12px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+    }
+
+}
