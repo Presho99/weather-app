@@ -9,12 +9,12 @@ function Forecast(){
             <div className="prediction-blur">
             <form className="prediction-form">
                 <input id= "prediction-input" type="text" placeholder="Enter city"/>
-                <button className="prediction-search"></button>
+                
             </form>
             {/* prediction main */}
             <div className="prediction-main">
                 <h2>Nairobi</h2>
-                <h1>34°</h1>
+                <h1>34°C</h1>
                 <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                 </div>
@@ -26,16 +26,19 @@ function Forecast(){
                       <p>Temperature</p>
                       <h3>88mmHg</h3>
                   </div>
+                  
                   <div className="humidity">
                       <p>Humidity</p>
                       <h3>88mmHg</h3>
                   </div>
+                  <div className="first-line"></div>
                   <div className="air">
-                      <p>Air Quality</p>
+                      <p>Wind Speed</p>
                       <h3>88mmHg</h3>
                   </div>
+                  <div className="second-line"></div>
                   <div className="wind">
-                      <p>Wind</p>
+                      <p>Visibility</p>
                       <h3>88mmHg</h3>
                   </div>
                 </div>
@@ -54,6 +57,7 @@ function Forecast(){
                     <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                     </div>
+                    <div className="shadow"></div>
                     <div className="prediction-side-details">
                         <p>28°C</p>
                         <p>Sunny</p>
@@ -65,6 +69,7 @@ function Forecast(){
                     <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                     </div>
+                    <div className="shadow"></div>
                     <div className="prediction-side-details">
                         <p>28°C</p>
                         <p>Sunny</p>
@@ -76,6 +81,7 @@ function Forecast(){
                     <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                     </div>
+                    <div className="shadow"></div>
                     <div className="prediction-side-details">
                         <p>28°C</p>
                         <p>Sunny</p>
@@ -87,6 +93,7 @@ function Forecast(){
                     <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                     </div>
+                    <div className="shadow"></div>
                     <div className="prediction-side-details">
                         <p>28°C</p>
                         <p>Sunny</p>
@@ -96,25 +103,37 @@ function Forecast(){
 
             <div className="prediction-side-bottom">
                 <div className="side-bottom-city one">
+                  
+                  
+                  <h2>Bei jing</h2>
                   <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                   </div>
-                  <h2>Bei jing</h2>
                   <h3>28°C</h3>
+                  
+                 
                 </div>
                 <div className="side-bottom-city two">
+                 
+                  
+                  <h2>Bei jing</h2>
                   <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                   </div>
-                  <h2>Bei jing</h2>
                   <h3>28°C</h3>
+                  
+                 
                 </div>
                 <div className="side-bottom-city three">
+                 
+                  
+                  <h2>Bei jing</h2>
                   <div className="icon">
                     <img src="svg/wi-solar-eclipse.svg"/>
                   </div>
-                  <h2>Bei jing</h2>
                   <h3>28°C</h3>
+                  
+                 
                 </div>
             </div>
 

@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 * {
     box-sizing: border-box;
+    font-family: "Lato";
 }
 
 .prediction {
@@ -22,32 +24,97 @@
     -webkit-backdrop-filter: blur(13px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 7px 7px 7px 10px;
+    top: 10px;
 }
 
 .prediction-main {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     width: 400px;
     height: 585px;
-    background-color: white;
     border-radius: 20px;
     background: rgba(16, 15, 15, 0.25);
-    margin-top: -30px;
-    color: #eee;
+    margin-top: 30px;
+    color: #d3d3d3;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px;
+}
+.prediction-form input{
+    font-size: 16px;
+    color: #dedede;
+    padding: 8px;
+    width: 30%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+.prediction-main h2{
+  letter-spacing: 2px;
+
+}
+.prediction-main h1{
+    font-size: 80px;
+    margin-top: 0px;
+}
+.prediction-main img{
+    width: 200px;
+    margin-top: -60px;
+    filter: invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%);
+}
+
+.prediction-main .navbar{
+    background-color: white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-top: 20px;
+    
+}
+
+.prediction-main .navbar a{
+    font-size: 21px; 
+}
+.prediction-main .main-details{
+    padding: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+    color: #d3d3d3;
+    
+} 
+
+   
+
+.prediction-main .main-details .temperature{
+    display: none;
+}
+ .main-details .first-line,  .main-details .second-line{
+    background-color: white;
+    height: 100%;
+    width: 1px;
+    z-index: 2;
+    
+  
 }
 .prediction-side{
+
     width: 800px;
     height: 350px;
     display: flex;
+    flex-wrap: wrap;
     background: rgba(16, 15, 15, 0.25);
     margin-top: -581px;
     margin-left: 420px;
     padding: 10px;
-    color: #eee;
+    color: #d3d3d3;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -58,11 +125,58 @@
     width: 180px;
     margin-left: 10px;
     justify-content: center;
-    /* background-color: blue; */
+    position: relative;
+   
 }
 .prediction-side-box .icon{
     filter: invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%);
-   
+   margin-left: -120px;
+}
+.prediction-side-box .icon img{
+    margin-top: 0px;
+    width: 120px;
+    -webkit-animation: MoveUpDown 1s infinite  alternate;
+    animation: MoveUpDown 1s infinite  alternate;
+}
+
+@keyframes MoveUpDown{ 
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@-webkit-keyframes MoveUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.shadow{
+    background-color: #111111;
+    opacity: 0.5;
+    width: 30px;
+    height: 6px;
+    border-radius: 30px;
+    bottom: 100px;
+    left: 76px;
+    position: absolute;
+    -webkit-animation: scaling 1s infinite alternate;
+    animation: scaling 1s infinite alternate;
+}
+@keyframes scaling{
+    0%{
+        transform: scale(-10px);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+
+}
+
+@-webkit-keyframes scaling {
+    0%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
 }
 .prediction-side-details{
     margin-top: 160px;
@@ -70,15 +184,43 @@
 }
 
 .prediction-side-bottom{
+ 
     width: 800px;
-    height: 180px;
+    height: 200px;
     display: flex;
     margin-top: 25px;
     margin-left: 420px;
+    
+    justify-content: space-between;
+    
+}
+.side-bottom-city{
+    position: relative;
+    font-family: "Lato", sans-serif;
+    color: #d3d3d3;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   cursor: pointer;
     backdrop-filter: blur(4px);
+    width: 250px;
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
+.side-bottom-city h2{
+    font-size: 34px;
+    margin-top: 25px;
+}
 
+.side-bottom-city h3{
+    font-size: 30px;
+    margin-top: 70px;
+}
+.side-bottom-city img{
+    width: 80px;
+    margin-top: -20px;
+   
+    filter: invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%);
 }
