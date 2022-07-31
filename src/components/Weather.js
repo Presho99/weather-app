@@ -53,9 +53,7 @@ function Weather({ data }) {
 
                     </div>
                     <aside>
-                        <form action="" autoComplete="off">
-                            <input id="input" type="text" value={searchCity} onChange={handleSearch} placeholder="Enter city" />
-                        </form>
+                        <h3>Weather Details</h3>
 
                         <div className="weather-details">
 

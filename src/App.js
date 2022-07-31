@@ -23,11 +23,11 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
        {/* <Home/> */}
        {/* {data.current ?<Weather data={data}/> : null} */}
        
-        {/* <Forecast/> */}
+        <Forecast/>
         {/* <Clock/> */}
 
      

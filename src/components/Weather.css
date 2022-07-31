@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Fraunces:100,300,400,700);
 
 * {
     box-sizing: border-box;
@@ -12,6 +12,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .forecast-blur {
@@ -58,6 +59,11 @@ aside {
     background: rgba(21, 20, 20, 0.35);
     backdrop-filter: blur(6.5px);
     -webkit-backdrop-filter: blur(6.5px);
+    color: #eee;
+}
+
+aside h3{
+    letter-spacing: 1px;
 }
 
 aside #input {
@@ -110,21 +116,18 @@ aside .weather-details button {
     justify-content: space-between;
     color: #eee;
 }
-
 .weather-content .degrees {
     font-size: 48px;
 }
-
 .weather-content .city-date h2 {
     margin-top: 105px;
     margin-bottom: -10px;
 }
-
 .weather-content .icon img {
+    margin-left: 20px;
     margin-top: 91px;
     filter: invert(90%) sepia(11%) saturate(777%) hue-rotate(192deg) brightness(104%) contrast(107%);
 }
-
 @media(max-width: 800px) {
     aside {
         width: 260px;
@@ -141,14 +144,11 @@ aside .weather-details button {
         align-items: center;
         text-align: center;
         justify-content: center;
-        
     }
-
     .weather-content .degrees {
-        font-size: 70px;
-        /* margin-bottom: 145px; */
+        font-size: 50px;
+        margin-left: 50px;
     }
-
     .weather-content .city-date h2 {
         margin-top: 105px;
         margin-bottom: -10px;
