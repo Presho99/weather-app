@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import "./Weather.css"
 
 // const forecastStyle = {
@@ -13,19 +13,20 @@ function Weather({ data }) {
     const date = Date(data.current.last_updated_epoch).slice(0, 21)
     let background = "sunny.webp"
     const text = data.current.condition.text.toLowerCase()
-    background = text.includes("rain") || text.includes("drizzle") || text.includes("storm")
+    background = text.includes("rain") || text.includes("drizzle") || text.includes("storm") || text.includes("shower")
         ? "rainy.jpeg" :
+        text.includes("fog") || text.includes("mist") ? "fog.webp" :
         text.includes("cloud") || text.includes("overcast") ? "cloudy.webp" :
             "snow.jpeg"
-    
-    function handleSearch(e){
+
+    function handleSearch(e) {
         setSearchCity(e.target.value)
     }
 
-    useEffect(()=> {
+    useEffect(() => {
         fetch(`http://api.weatherapi.com/v1/search.json?key=f2397f2d2d31453d8a2182757222907&q=${searchCity}`)
-        .then((r) => r.json())
-        .then(setAutoCity)
+            .then((r) => r.json())
+            .then(setAutoCity)
     }, [searchCity])
 
     return (
@@ -55,24 +56,32 @@ function Weather({ data }) {
                         <form action="" autoComplete="off">
                             <input id="input" type="text" value={searchCity} onChange={handleSearch} placeholder="Enter city" />
                         </form>
-                        <div className="cities">
-                            <button className="cities-button">Manchester</button>
-                            <button className="cities-button">New York</button>
-                            <button className="cities-button last">Carlifonia</button>
-                        </div>
+
                         <div className="weather-details">
-                            <h3>Weather Details</h3>
+
                             <button className="details">
-                                <p>Humidity</p>
-                                <p>{data.current.humidity}%</p>
+                                <p>Description</p>
+                                <p>{data.current.condition.text}</p>
                             </button>
                             <button className="details">
                                 <p>Wind Speed</p>
                                 <p>{data.current.wind_kph}km/hr</p>
                             </button>
                             <button className="details">
-                                <p>Pressure</p>
-                                <p>{data.current.pressure_in}in</p>
+                                <p>Humidity</p>
+                                <p>{data.current.humidity}%</p>
+                            </button>
+                            <button className="details">
+                                <p>Visibility</p>
+                                <p>{data.current.vis_km}km</p>
+                            </button>
+                            <button className="details">
+                                <p>Precipitation</p>
+                                <p>{ data.current.precip_mm}mm</p>
+                            </button>
+                            <button className="details">
+                                <p>Wind Direction</p>
+                                <p>{data.current.wind_dir}</p>
                             </button>
                         </div>
                     </aside>

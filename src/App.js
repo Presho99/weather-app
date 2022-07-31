@@ -22,8 +22,8 @@ function App() {
   
   return (
     <div className="App">
-       <Home/>
-       {/* {data.current ?<Weather data={data}/> : null} */}
+       {/* <Home/> */}
+       {data.current ?<Weather data={data}/> : null}
        
         {/* <Forecast/> */}
         {/* <Clock/> */}
