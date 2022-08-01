@@ -10,7 +10,7 @@ function Clock({data}) {
                     <div className="top">
                         <img src="svg/wi-sunrise.svg" />
                         <p>Sunrise</p>
-                        <h3>{data.forecast.forecastday[0].astro.sunrise.slice(0,5)}</h3>
+                        <h3>{data.forecast.forecastday[0].astro.sunrise}</h3>
                     </div>
 
 
@@ -18,7 +18,7 @@ function Clock({data}) {
                     <div className="bottom">
                         <img src="svg/wi-sunset.svg" />
                         <p>Sunset</p>
-                        <h3>{data.forecast.forecastday[0].astro.sunset.slice(0,5)}</h3>
+                        <h3>{data.forecast.forecastday[0].astro.sunset}</h3>
 
                     </div>
 
@@ -32,7 +32,7 @@ function Clock({data}) {
                     <div className="top">
                         <img src="svg/wi-moonrise.svg" />
                         <p>Moonrise</p>
-                        <h3>{data.forecast.forecastday[0].astro.moonrise.slice(0,5)}</h3>
+                        <h3>{data.forecast.forecastday[0].astro.moonrise}</h3>
 
                     </div>
 
@@ -41,7 +41,7 @@ function Clock({data}) {
                     <div className="bottom">
                         <img src="svg/wi-moonset.svg" />
                         <p>Moonset</p>
-                        <h3>{data.forecast.forecastday[0].astro.moonset.slice(0,5)}</h3>
+                        <h3>{data.forecast.forecastday[0].astro.moonset}</h3>
 
                     </div>
 

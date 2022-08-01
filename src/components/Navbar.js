@@ -24,6 +24,8 @@ function Navbar({onAutoClick}){
         }
     }, [searchCity])
 
+  
+
     return(
         <div className="navbar">
             <form>

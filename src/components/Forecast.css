@@ -144,7 +144,7 @@
    
 }
 .prediction-side-box .icon{
-    filter: invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%);
+   
    margin-left: -120px;
 }
 .prediction-side-box .icon img{
@@ -195,7 +195,7 @@
 }
 .prediction-side-details{
     margin-top: 160px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .prediction-side-bottom{

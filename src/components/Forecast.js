@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDroplet, faThermometer, faWind, faEye, faStar } from "@fortawesome/free-solid-svg-icons"
 
 function Forecast({ data }) {
+    const forecast = data.forecast.forecastday[0].hour
+    let hour = parseInt(data.current.last_updated.slice(data.current.last_updated.length - 5).slice(0,2))
+    hour = hour < 20 ? hour : 20
+    
     return (
         <div className="prediction" style={{ backgroundImage: `url("https://images.pexels.com/photos/11724626/pexels-photo-11724626.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"` }}>
             <div className="prediction-blur">
@@ -18,7 +22,8 @@ function Forecast({ data }) {
                     <h2>{data.location.name}</h2>
                     <h1>{data.current.temp_c}&deg;</h1>
                     <div className="icon">
-                        <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
+                        <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} 
+                        style={{filter: `${data.current.is_day ? "invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%)": " invert(44%) sepia(40%) saturate(1429%) hue-rotate(184deg) brightness(88%) contrast(88%)"}`}}/>
                     </div>
 
                     <div className="main-details">
@@ -51,19 +56,26 @@ function Forecast({ data }) {
                 </div>
                 {/* prediction side */}
                 <div className="prediction-side">
-                    <div className="prediction-side-box one">
-                        <h2>Monday</h2>
-                        <p>24th July</p>
-                        <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
+                    {forecast.slice(hour, hour+4).map((box) => {
+                        return(
+                            <div className="prediction-side-box one">
+                            <h2>{box.time.slice(-5)}</h2>
+                            <p>{Date(box.time_epoch).slice(0,10)}</p>
+                            <div className="icon">
+                                <img src={"svg/wi-" + box.condition.code + "-" + box.is_day + ".svg"} 
+                                style={{filter: `${box.is_day ? "invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%)": " invert(44%) sepia(40%) saturate(1429%) hue-rotate(184deg) brightness(88%) contrast(88%)"}`}}/>
+                            </div>
+                            <div className="shadow"></div>
+                            <div className="prediction-side-details">
+                                <p>{box.temp_c}° C</p>
+                                <p>{box.condition.text}</p>
+                            </div>
                         </div>
-                        <div className="shadow"></div>
-                        <div className="prediction-side-details">
-                            <p>28°C</p>
-                            <p>Sunny</p>
-                        </div>
-                    </div>
-                    <div className="prediction-side-box two">
+
+                        )
+                    })}
+                   
+                    {/* <div className="prediction-side-box two">
                         <h2>Monday</h2>
                         <p>24th July</p>
                         <div className="icon">
@@ -98,7 +110,7 @@ function Forecast({ data }) {
                             <p>28°C</p>
                             <p>Sunny</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="prediction-side-bottom">
@@ -107,7 +119,8 @@ function Forecast({ data }) {
 
                         <h2>Bei jing</h2>
                         <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
+                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} 
+                            style={{filter: `${data.current.is_day ? "invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%)": " invert(44%) sepia(40%) saturate(1429%) hue-rotate(184deg) brightness(88%) contrast(88%)"}`}}/>
                         </div>
                         <h3>28°C</h3>
 

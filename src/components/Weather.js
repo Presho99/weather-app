@@ -14,6 +14,8 @@ function Weather({ data }) {
     const text = data.current.condition.text.toLowerCase()
     background = text.includes("rain") || text.includes("drizzle") || text.includes("storm") || text.includes("shower")
         ? "rainy.jpeg" :
+        text.includes("clear") ? "clear.webp" :
+        text.includes("sun") ? "sunny.webp" :
         text.includes("fog") || text.includes("mist") ? "fog.webp" :
         text.includes("cloud") || text.includes("overcast") ? "cloudy.webp" :
             "snow.jpeg"
