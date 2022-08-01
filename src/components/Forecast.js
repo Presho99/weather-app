@@ -7,10 +7,7 @@ function Forecast(){
     return(
         <div className="prediction" style={{backgroundImage:`url("https://images.pexels.com/photos/11724626/pexels-photo-11724626.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"`}}>
             <div className="prediction-blur">
-            <form className="prediction-form">
-                <input id= "prediction-input" type="text" placeholder="Enter city"/>
-                
-            </form>
+            
             {/* prediction main */}
             <div className="prediction-main">
                 <h2>Nairobi</h2>
