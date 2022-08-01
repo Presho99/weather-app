@@ -153,6 +153,7 @@ button {
     border: none;
 }
 
+
 button:hover {
     background: linear-gradient(145deg, #26272a, #2d2e32);
     box-shadow: 8px 8px 19px #17181a,
@@ -169,16 +170,21 @@ button.four {
     margin-right: 120px;
 }
 
-button.one {
+button a{
+    font-family: "Fraunces", sans-serif;
+    text-decoration: none;
+}
+
+button.one a{
     color: #8D3A76;
 }
 
-button.four {
+button.four a{
     color: #5CA84C;
 }
 
 
-button.three {
+button.three a{
     color: #a77f39;
 }
 

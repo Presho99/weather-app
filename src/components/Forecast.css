@@ -34,23 +34,13 @@
     height: 585px;
     border-radius: 20px;
     background: rgba(16, 15, 15, 0.25);
-    margin-top: 30px;
+    margin-top: 60px;
     color: #d3d3d3;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 10px;
-}
-.prediction-form input{
-    font-size: 16px;
-    color: #dedede;
-    padding: 8px;
-    width: 30%;
-    background: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #dedede;
 }
 .prediction-main h2{
   letter-spacing: 2px;
@@ -66,7 +56,7 @@
     filter: invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%);
 }
 
-.prediction-main .navbar{
+.prediction-main .main-navbar{
     background-color: white;
     display: flex;
     height: 50px;
@@ -78,7 +68,7 @@
     
 }
 
-.prediction-main .navbar a{
+.prediction-main .main-navbar a{
     font-size: 21px; 
 }
 .prediction-main .main-details{
@@ -188,9 +178,8 @@
     width: 800px;
     height: 200px;
     display: flex;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: 420px;
-    
     justify-content: space-between;
     
 }
@@ -221,6 +210,5 @@
 .side-bottom-city img{
     width: 80px;
     margin-top: -20px;
-   
     filter: invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%);
 }

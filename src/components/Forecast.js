@@ -39,7 +39,7 @@ function Forecast(){
                       <h3>88mmHg</h3>
                   </div>
                 </div>
-                <div className="navbar">
+                <div className="main-navbar">
                     <a href="#"><FontAwesomeIcon icon={faThermometer}/></a>
                     <a href="#"><FontAwesomeIcon icon={faDroplet}/></a>
                     <a href="#"><FontAwesomeIcon icon={faWind}/></a>

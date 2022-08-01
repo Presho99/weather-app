@@ -1,5 +1,6 @@
 import React from "react"
 import "./Home.css"
+import {Link} from "react-router-dom"
 function Home() {
 
     return (
@@ -11,7 +12,10 @@ function Home() {
                         <img src="svg/wi-solar-eclipse.svg" />
                     </div>
                 </div>
-                <button className="one">FORECAST</button >
+                <button className="one">
+                    <Link to="/Forecast"> FORECAST</Link>
+                   
+                    </button >
                 <div className="circle sixth">
 
                     <div className="inner-circle two">
@@ -23,14 +27,17 @@ function Home() {
             </div>
 
             <div className="right">
-                <button className="three">TODAY</button>
+                <button className="three">
+                <Link to="/Weather"> TODAY</Link>
+                </button>
                 <div className="circle seventh">
 
                     <div className="inner-circle three">
                         <img src="svg/wi-time-4.svg" />
                     </div>
                 </div>
-                <button className="four">SUN/MOON</button>
+                <button className="four">
+                <Link to="/Clock"> SUN/MOON</Link></button>
                 {/* <div className="circle eighth">
 
                     <div className="inner-circle four">

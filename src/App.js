@@ -27,24 +27,39 @@ function App() {
   
        <div className="App">
          <BrowserRouter>
+            {/* <Navbar/> */}
+            
          <Switch>
              <Route exact path={"/"}>
+
                <Home/>
              </Route>
              <Route exact path={"/Weather"}>
-                {data.current ?<Weather data={data}/> : null}
+               <div style={{
+                 position: "relative",
+                 justifyContent: "center"}}>
+                 <Navbar />
+                 {data.current ?<Weather data={data}/> : null}
+               </div>
+               
              </Route>
              <Route exact path={"/Forecast"}>
-                <Forecast/>
+             <div >
+                 <Navbar />
+                 <Forecast/>
+               </div>
              </Route>
              <Route exact path={"/Clock"}>
+             <div >
+                 <Navbar />
                 <Clock/>
+               </div>
              </Route>
 
            </Switch>
          </BrowserRouter>
            
-      {/* <Navbar/> */}    
+       
       
     
       </div>

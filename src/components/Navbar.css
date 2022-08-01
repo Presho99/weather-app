@@ -10,6 +10,10 @@
     margin-top: 10px;
     border-radius: 20px;
     transition: transform 250ms ease-in-out;
+    position: absolute;
+    left: 30%;
+    top: 0;
+    z-index: 1;
     
 }
 
@@ -42,6 +46,13 @@ font-size: 20px;
     padding: 12px 0;
     background-position: 100% center;
     justify-content: flex-start;
+    transition : .6s
     
 }
+/* @media(max-width: 700px){
+    .navbar{
+        width: 300px;
+
+    }
+} */
 
