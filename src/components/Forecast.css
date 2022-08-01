@@ -42,6 +42,20 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 10px;
 }
+.prediction-main .star{
+    position: absolute;
+    font-size: 24px;
+    right: 19px;
+    top: 20px;
+}
+.prediction-main .star:hover, .prediction-main .star:focus{
+    color: #a77f39;
+}
+
+.prediction-main .star.active{
+    color: #a77f39;
+
+}
 .prediction-main h2{
   letter-spacing: 2px;
 
@@ -57,19 +71,30 @@
 }
 
 .prediction-main .main-navbar{
-    background-color: white;
+    background-color: transparent;
+    border: 1px solid #d3d3d3;
     display: flex;
     height: 50px;
     width: 100%;
     padding: 15px;
     justify-content: space-around;
-    border-radius: 10px;
+  
     margin-top: 20px;
-    
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
-.prediction-main .main-navbar a{
-    font-size: 21px; 
+.navbar-icon{
+    font-size: 21px;
+}
+.navbar-icon:hover, .navbar-icon:focus{
+    color: #a77f39;
+    transform: scale(1.4);
+}
+.navbar-icon.active{
+    color: #a77f39;
+    transform: scale(1.4);
+
 }
 .prediction-main .main-details{
     padding: 10px;

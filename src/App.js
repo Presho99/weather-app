@@ -20,6 +20,11 @@ function App() {
   }, [city])
 
   console.log(data)
+
+  function handleOnAutoClick(place){
+    setCity(place)
+
+  }
   
 
   
@@ -38,20 +43,20 @@ function App() {
                <div style={{
                  position: "relative",
                  justifyContent: "center"}}>
-                 <Navbar />
+                 <Navbar onAutoClick={handleOnAutoClick}/>
                  {data.current ?<Weather data={data}/> : null}
                </div>
                
              </Route>
              <Route exact path={"/Forecast"}>
              <div >
-                 <Navbar />
-                 <Forecast/>
+                 <Navbar onAutoClick={handleOnAutoClick}/>
+                 {data.forecast ?<Forecast data={data}/> : null}
                </div>
              </Route>
              <Route exact path={"/Clock"}>
              <div >
-                 <Navbar />
+                 <Navbar onAutoClick={handleOnAutoClick}/>
                 {data.forecast ? <Clock data={data}/> : null}
                </div>
              </Route>
