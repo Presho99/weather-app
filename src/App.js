@@ -52,7 +52,7 @@ function App() {
              <Route exact path={"/Clock"}>
              <div >
                  <Navbar />
-                <Clock/>
+                {data.forecast ? <Clock data={data}/> : null}
                </div>
              </Route>
 

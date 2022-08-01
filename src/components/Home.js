@@ -38,17 +38,7 @@ function Home() {
                 </div>
                 <button className="four">
                 <Link to="/Clock"> SUN/MOON</Link></button>
-                {/* <div className="circle eighth">
-
-                    <div className="inner-circle four">
-                        <img src="svg/wi-solar-eclipse.svg" />
-                    </div>
-                </div> */}
-
             </div>
-
-
-
         </div>
     )
 
