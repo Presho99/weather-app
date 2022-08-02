@@ -32,8 +32,7 @@ function App() {
   
        <div className="App">
          <BrowserRouter>
-            {/* <Navbar/> */}
-            
+                       
          <Switch>
              <Route exact path={"/"}>
 
@@ -65,7 +64,6 @@ function App() {
          </BrowserRouter>
            
        
-      
     
       </div>
 
