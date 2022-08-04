@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import "./Weather.css"
 
 // const forecastStyle = {
@@ -28,7 +28,7 @@ function Weather({ data }) {
             <div className="forecast-blur">
                 <div className="forecast-container">
                     <div className="image">
-                        <img src={"weather-img/" + background} />
+                        <img src={"weather-img/" + background} alt="icon"/>
                     </div>
                     <div className="weather-content">
                         <div className="degrees">
@@ -41,7 +41,7 @@ function Weather({ data }) {
                         </div>
 
                         <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
+                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} alt="icon"/>
 
                         </div>
 

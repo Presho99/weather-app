@@ -73,7 +73,7 @@ function Forecast({ data }) {
                             isActive === faWind ? data.current.wind_kph + "kph" :
                                 data.current.vis_km + "km"}</h1>
                     <div className="icon">
-                        <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"}
+                        <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} alt="icon"
                             style={{ filter: `${data.current.is_day ? "invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%)" : " invert(44%) sepia(40%) saturate(1429%) hue-rotate(184deg) brightness(88%) contrast(88%)"}` }} />
                     </div>
 
@@ -97,20 +97,7 @@ function Forecast({ data }) {
                         })}
 
 
-                        {/* <div className="humidity">
-                            <p>Humidity</p>
-                            <h3>{data.current.humidity} %</h3>
-                        </div>
-                        <div className="first-line"></div>
-                        <div className="air">
-                            <p>Wind Speed</p>
-                            <h3>{data.current.wind_kph} km/hr</h3>
-                        </div>
-                        <div className="second-line"></div>
-                        <div className="wind">
-                            <p>Visibility</p>
-                            <h3>{data.current.vis_km} km</h3>
-                        </div> */}
+                    
                     </div>
                     <div className="main-navbar">
                         {activeIcons.map((icon) => {
@@ -125,9 +112,7 @@ function Forecast({ data }) {
 
                         )}
 
-                        {/* <FontAwesomeIcon icon={faDroplet} className={isActive ? 'navbar-icon active' : 'navbar-icon'} onClick={handleActiveClick} />
-                        <FontAwesomeIcon icon={faWind} className={isActive ? 'navbar-icon active' : 'navbar-icon'} onClick={handleActiveClick} />
-                        <FontAwesomeIcon icon={faEye} className={isActive ? 'navbar-icon active' : 'navbar-icon'} onClick={handleActiveClick} /> */}
+                      
                     </div>
                 </div>
                 {/* prediction side */}
@@ -138,7 +123,7 @@ function Forecast({ data }) {
                                 <h2>{box.time.slice(-5)}</h2>
                                 <p>{Date(box.time_epoch).slice(0, 10)}</p>
                                 <div className="icon">
-                                    <img src={"svg/wi-" + box.condition.code + "-" + box.is_day + ".svg"}
+                                    <img src={"svg/wi-" + box.condition.code + "-" + box.is_day + ".svg"} alt="icon"
                                         style={{ filter: `${box.is_day ? "invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%)" : " invert(44%) sepia(40%) saturate(1429%) hue-rotate(184deg) brightness(88%) contrast(88%)"}` }} />
                                 </div>
                                 <div className="shadow"></div>
@@ -151,42 +136,6 @@ function Forecast({ data }) {
                         )
                     })}
 
-                    {/* <div className="prediction-side-box two">
-                        <h2>Monday</h2>
-                        <p>24th July</p>
-                        <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
-                        </div>
-                        <div className="shadow"></div>
-                        <div className="prediction-side-details">
-                            <p>28°C</p>
-                            <p>Sunny</p>
-                        </div>
-                    </div>
-                    <div className="prediction-side-box three">
-                        <h2>Monday</h2>
-                        <p>24th July</p>
-                        <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
-                        </div>
-                        <div className="shadow"></div>
-                        <div className="prediction-side-details">
-                            <p>28°C</p>
-                            <p>Sunny</p>
-                        </div>
-                    </div>
-                    <div className="prediction-side-box four">
-                        <h2>Monday</h2>
-                        <p>24th July</p>
-                        <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
-                        </div>
-                        <div className="shadow"></div>
-                        <div className="prediction-side-details">
-                            <p>28°C</p>
-                            <p>Sunny</p>
-                        </div>
-                    </div> */}
                 </div>
 
                 <div className="prediction-side-bottom">
@@ -203,28 +152,8 @@ function Forecast({ data }) {
                         )
                     })}
 
-                    {/* <div className="side-bottom-city two">
-
-
-                        <h2>Bei jing</h2>
-                        <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
-                        </div>
-                        <h3>28°C</h3>
-
-
-                    </div> */}
-                    {/* <div className="side-bottom-city three">
-
-
-                        <h2>Bei jing</h2>
-                        <div className="icon">
-                            <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} />
-                        </div>
-                        <h3>28°C</h3>
-
-
-                    </div> */}
+                    
+                    
                 </div>
 
             </div>

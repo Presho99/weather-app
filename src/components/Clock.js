@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import "./Clock.css"
 
 function Clock({data}) {
@@ -8,7 +8,7 @@ function Clock({data}) {
                 <div className="line"></div>
                 <div className="clock-one">
                     <div className="top">
-                        <img src="svg/wi-sunrise.svg" />
+                        <img src="svg/wi-sunrise.svg" alt="icon"/>
                         <p>Sunrise</p>
                         <h3>{data.forecast.forecastday[0].astro.sunrise}</h3>
                     </div>
@@ -16,7 +16,7 @@ function Clock({data}) {
 
                     <button>Horizon</button>
                     <div className="bottom">
-                        <img src="svg/wi-sunset.svg" />
+                        <img src="svg/wi-sunset.svg" alt="icon"/>
                         <p>Sunset</p>
                         <h3>{data.forecast.forecastday[0].astro.sunset}</h3>
 
@@ -30,7 +30,7 @@ function Clock({data}) {
                 </div>
                 <div className="clock-two">
                     <div className="top">
-                        <img src="svg/wi-moonrise.svg" />
+                        <img src="svg/wi-moonrise.svg" alt="icon"/>
                         <p>Moonrise</p>
                         <h3>{data.forecast.forecastday[0].astro.moonrise}</h3>
 
@@ -39,7 +39,7 @@ function Clock({data}) {
 
                     <button>Horizon</button>
                     <div className="bottom">
-                        <img src="svg/wi-moonset.svg" />
+                        <img src="svg/wi-moonset.svg" alt="icon"/>
                         <p>Moonset</p>
                         <h3>{data.forecast.forecastday[0].astro.moonset}</h3>
 

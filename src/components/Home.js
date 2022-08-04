@@ -9,7 +9,7 @@ function Home() {
                 <div className="circle fifth">
 
                     <div className="inner-circle one">
-                        <img src="svg/wi-solar-eclipse.svg" />
+                        <img src="svg/wi-solar-eclipse.svg" alt="solar"/>
                     </div>
                 </div>
                 <button className="one">
@@ -20,7 +20,7 @@ function Home() {
 
                     <div className="inner-circle two">
 
-                        <img src="svg/wi-sunrise.svg" />
+                        <img src="svg/wi-sunrise.svg" alt="sun"/>
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@ function Home() {
                 </button>
                 <div className="circle seventh">
                     <div className="inner-circle three">
-                        <img src="svg/wi-time-4.svg" />
+                        <img src="svg/wi-time-4.svg" alt="time"/>
                     </div>
                 </div>
                 <button className="four">
