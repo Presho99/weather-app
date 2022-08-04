@@ -26,8 +26,6 @@ function App() {
 
   }
   
-
-  
   return (
   
        <div className="App">
@@ -62,14 +60,7 @@ function App() {
 
            </Switch>
          </BrowserRouter>
-           
-       
-    
       </div>
-
-    
-   
-   
   );
 }
 
