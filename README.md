@@ -1,7 +1,7 @@
 # Weather Application
 
 ## API Used:
-https://www.weatherapi.com/
+- https://www.weatherapi.com/
 End points:
 -http://api.weatherapi.com/v1/forecast.json?key=f2397f2d2d31453d8a2182757222907&q=location&aqi=yes
 
