@@ -73,7 +73,7 @@ function Forecast({ data }) {
                             isActive === faWind ? data.current.wind_kph + "kph" :
                                 data.current.vis_km + "km"}</h1>
                     <div className="icon">
-                        <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} alt="icon"
+                        <img src={"svg/wi-" + data.current.condition.code + "-" + data.current.is_day + ".svg"} 
                             style={{ filter: `${data.current.is_day ? "invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%)" : " invert(44%) sepia(40%) saturate(1429%) hue-rotate(184deg) brightness(88%) contrast(88%)"}` }} />
                     </div>
 
@@ -123,7 +123,7 @@ function Forecast({ data }) {
                                 <h2>{box.time.slice(-5)}</h2>
                                 <p>{Date(box.time_epoch).slice(0, 10)}</p>
                                 <div className="icon">
-                                    <img src={"svg/wi-" + box.condition.code + "-" + box.is_day + ".svg"} alt="icon"
+                                    <img src={"svg/wi-" + box.condition.code + "-" + box.is_day + ".svg"} 
                                         style={{ filter: `${box.is_day ? "invert(92%) sepia(41%) saturate(1655%) hue-rotate(333deg) brightness(100%) contrast(99%)" : " invert(44%) sepia(40%) saturate(1429%) hue-rotate(184deg) brightness(88%) contrast(88%)"}` }} />
                                 </div>
                                 <div className="shadow"></div>

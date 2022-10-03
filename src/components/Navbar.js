@@ -15,7 +15,7 @@ function Navbar({onAutoClick}){
     
     useEffect(() => {
         if(searchCity.length > 2) {
-            fetch(`http://api.weatherapi.com/v1/search.json?key=f2397f2d2d31453d8a2182757222907&q=${searchCity}`)
+            fetch(`http://api.weatherapi.com/v1/search.json?key=b4bb0f58f9a64179ac1103527221807&q=${searchCity}`)
             .then((r) => r.json())
             .then(setAutoCity)
             .catch(console.log)
