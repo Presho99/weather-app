@@ -1,14 +1,14 @@
 .navbar {
-    width: 500px;
+    width: 350px;
     height: 50px;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border:2px solid #dedede;
     background-color: transparent;
     display: flex;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
     transition: transform 250ms ease-in-out;
     position: absolute;
     left: 30%;
@@ -29,6 +29,7 @@
 }
 
 .navbar form button{
+    width: 60px;
 font-size: 20px;
   color: #dedede; 
   background: transparent;
@@ -36,11 +37,14 @@ font-size: 20px;
   outline: 0; 
   border-radius: none;
   box-shadow: none;
+  margin-left: 5px;
+  transition: .6s;
+ 
 }
 
 .navbar:hover, .navbar:focus{
     border: none;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 2px solid #dedede;
     border-radius: 0;
     background-color: transparent;
     padding: 12px 0;
@@ -48,6 +52,11 @@ font-size: 20px;
     justify-content: flex-start;
     transition : .6s
     
+}
+
+.navbar:hover button{
+    display: none;
+    transition: .6s;
 }
 /* @media(max-width: 700px){
     .navbar{

@@ -29,7 +29,7 @@ function Navbar({onAutoClick}){
     return(
         <div className="navbar">
             <form>
-                <input className="navbar-input" type="text" placeholder="Enter city" onChange={handleSearch} value={searchCity}/>
+                <input className="navbar-input" type="text" placeholder="Search city..." onChange={handleSearch} value={searchCity}/>
                 <button><FontAwesomeIcon icon={faSearch}/></button>
             </form>
             <div style={{position:"absolute", backgroundColor: "#111111", color: "#dedede", top: "50px", left: "24px", width:"305px", }}>
