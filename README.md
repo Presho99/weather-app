@@ -25,7 +25,7 @@ https://youtu.be/WL0_HY5lTcI
 
 ### 4. Forecast 
 -Contains three sections:
-- A main that shows the current weather of the searched city. This section displays the city's name and by default the city's temperature. At the bottom of that section is a navigation bar containing icons that represent different weather details. There is also a favorite button that when clicked adds to the user's favorite cities.
+- A main that shows the current weather of the searched city. This section displays the city's name and by default the city's temperature. At the bottom of that section is a navigation bar containing icons that represent different weather details. There is also a favorite button that when clicked adds to the user's favorite cities at the bottom section.
 - A second section that displays weather prediction for the next four hours for the different searched cities.
 - A bottom section that displays only three cities that the user may have added to favorites, while making use of GET and POST methods.
 ![Screenshot from 2022-10-18 14-58-35](https://user-images.githubusercontent.com/73560150/196423397-13da1e6c-2e85-43d0-b1ec-d4af528724c0.png)
